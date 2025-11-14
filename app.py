@@ -11,14 +11,14 @@ from sklearn.metrics import mean_absolute_error, r2_score
 # CONFIG
 # -----------------------------
 st.set_page_config(
-    page_title="Amazon Sales Dashboard",
+    page_title="Sales Sales Dashboard",
     layout="wide",
 )
 
 # -----------------------------
 # FIXED DATA PATH FROM GITHUB
 # -----------------------------
-DATA_URL = "https://raw.githubusercontent.com/yourusername/yourrepo/main/data/amazon_sales.csv"  # CHANGE THIS
+DATA_URL = "https://raw.githubusercontent.com/Saifullah-404/sales_dashboard/refs/heads/main/store%20sales%20data%20november.csv"  # CHANGE THIS
 
 # Load dataset
 df = pd.read_csv(DATA_URL)
@@ -56,7 +56,7 @@ st.markdown("""
 # -----------------------------
 # SIDEBAR FILTERS
 # -----------------------------
-st.sidebar.header("📌 Filters")
+st.sidebar.header("Filters")
 
 start = df[date_col].min()
 end = df[date_col].max()
@@ -71,7 +71,7 @@ df_filtered = df[
 # -----------------------------
 # TOP METRICS
 # -----------------------------
-st.title("📊 Amazon Sales Dashboard")
+st.title("Store Sales Dashboard")
 
 col1, col2, col3 = st.columns(3)
 
@@ -96,7 +96,7 @@ with col3:
 # -----------------------------
 # VISUALIZATIONS
 # -----------------------------
-st.header("📈 Data Visualization")
+st.header("Data Visualization")
 
 # Sales over time
 st.subheader("Sales Over Time")
@@ -120,7 +120,7 @@ st.pyplot(fig)
 # -----------------------------
 # MACHINE LEARNING PREDICTION
 # -----------------------------
-st.header("🤖 Sales Prediction (Random Forest)")
+st.header("Sales Prediction")
 
 df_ml = df_filtered[[sales_col, units_col]].dropna()
 
