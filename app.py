@@ -18,7 +18,7 @@ st.set_page_config(
 # -----------------------------
 # FIXED DATA PATH FROM GITHUB
 # -----------------------------
-DATA_URL = "https://raw.githubusercontent.com/yourusername/yourrepo/main/data/amazon_sales.csv"
+DATA_URL = "https://raw.githubusercontent.com/Saifullah-404/sales_dashboard/refs/heads/main/store%20sales%20data%20november.csv"
 
 # Load dataset
 df = pd.read_csv(DATA_URL)
